@@ -12,5 +12,5 @@ docker push nolanmagee/multi-worker:$SHA
 
 kubectl apply -f k8s
 kubectl set image deployments/server-deployment server=nolanmagee/multi-server:$SHA
-kubectl set image deployments/client-deployment server=nolanmagee/multi-client:$SHA
-kubectl set image deployments/worker-deployment server=nolanmagee/multi-worker:$SHA
+kubectl set image deployments/client-deployment client=nolanmagee/multi-client:$SHA
+kubectl set image deployments/worker-deployment worker=nolanmagee/multi-worker:$SHA
